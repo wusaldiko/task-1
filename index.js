@@ -23,8 +23,13 @@ function start() {
     if (t == 0 && i == 2) {
       if (arr[1] == 0) {
         if (arr[0] == 0) {
+          let a = localStorage.getItem("time");
           audio.play();
-          return start(...JSON.parse(localStorage.getItem("time")));
+          if (a) {
+            return start(...JSON.parse(localStorage.getItem("time")));
+          }
+
+          return start(hours, minutes, seconds);
         }
         arr[0] = arr[0] - 1;
         arr[2] = 60;
