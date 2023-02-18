@@ -28,7 +28,6 @@ function start() {
           if (a) {
             return start(...JSON.parse(localStorage.getItem("time")));
           }
-
           return start(hours, minutes, seconds);
         }
         arr[0] = arr[0] - 1;
